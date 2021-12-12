@@ -1,6 +1,7 @@
 package extension.website.kvision.project
 
 import io.kvision.core.Container
+import io.kvision.core.style
 import io.kvision.form.check.Radio
 import io.kvision.form.check.radio
 import io.kvision.form.check.radioInput
@@ -8,6 +9,12 @@ import io.kvision.html.*
 
 fun Container.slider() {
     section {
+        div(className = "slider-name") {
+            link("") {
+                setAttribute("name", "features")
+            }
+            h2("Features")
+        }
         id = "slider_bl"
         div(className = "wrapper") {
             radioInput(value = true) {
@@ -48,9 +55,9 @@ fun Container.slider() {
                     }
                     article {
                         div(className = "info bottom-right") {
-                            h4("Фильтр 1")
+                            h4("Таблица")
                         }
-                        image(Images.filter1)
+                        image(Images.table)
                     }
                 }
             }

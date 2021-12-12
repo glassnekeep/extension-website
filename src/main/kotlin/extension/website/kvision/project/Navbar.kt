@@ -1,10 +1,8 @@
 package extension.website.kvision.project
 
 import io.kvision.core.Container
-import io.kvision.html.div
-import io.kvision.html.link
-import io.kvision.html.nav
-import io.kvision.html.span
+import io.kvision.core.style
+import io.kvision.html.*
 import io.kvision.utils.px
 
 fun Container.navbar(primary: Boolean = true) {
@@ -52,8 +50,8 @@ fun Container.navbar(primary: Boolean = true) {
                         link(label, "#$url", className = "navbar-item is-secondary")
                     }
                     div {
-                        marginTop = 5.px
-                        marginLeft = 15.px
+                        marginTop = 15.px
+                        marginLeft = 180.px
                         link("Star", "https://github.com/glassnekeep/extension_for_home.mephi/", className = "github-button") {
                             setAttribute("data-icon", "octicon-star")
                             setAttribute("data-size", "large")

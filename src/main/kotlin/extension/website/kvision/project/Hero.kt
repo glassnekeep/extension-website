@@ -6,6 +6,7 @@ import io.kvision.html.*
 import io.kvision.navbar.navbar
 import io.kvision.panel.hPanel
 import io.kvision.utils.perc
+import io.kvision.utils.px
 import io.kvision.utils.rem
 
 external var MarketplaceWidget: dynamic
@@ -24,7 +25,10 @@ fun Container.hero() {
             div(className = "container") {
                 div(className = "has-text-centered") {
                     tag(TAG.FIGURE, className = "image is-96x96 is-inline-block") {
-                        image(Hero.logo, Hero.logoAlt)
+                        image(Hero.logo, Hero.logoAlt) {
+                            width = 240.px
+                            height = 130.px
+                        }
                     }
                     h1(Hero.title, className = "title is-1 is-bold is-spaced")
                     //h2(markedInline(Hero.subtitle), rich = true, className = "subtitle is-5 is-muted")
@@ -35,8 +39,10 @@ fun Container.hero() {
                         link(
                             Hero.buttonText,
                             Hero.buttonLink,
-                            className = "button cta is-large rounded secondary-btn raised"
-                        )
+                            className = "button cta is-large rounded secondary-btn raised",
+                        ) {
+                            setAttribute("name", "download")
+                        }
                     }
                 }
                 div(className = "columns") {

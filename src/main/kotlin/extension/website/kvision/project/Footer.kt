@@ -48,6 +48,9 @@ fun Container.column(footerColumn: FooterColumn) {
                     }
                 }
             }
+            link("") {
+                setAttribute("name", "contacts")
+            }
         }
     }
 }
