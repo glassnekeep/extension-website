@@ -42,11 +42,6 @@ kotlin {
             webpackTask {
                 outputFileName = "main.bundle.js"
             }
-            testTask {
-                useKarma {
-                    useChrome()
-                }
-            }
         }
         binaries.executable()
     }
