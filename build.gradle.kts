@@ -67,4 +67,8 @@ kotlin {
         implementation("io.kvision:kvision-testutils:$kvisionVersion")
     }
     sourceSets["main"].resources.srcDir(webDir)
+
+    tasks.register("stage") {
+        dependsOn("build")
+    }
 }
